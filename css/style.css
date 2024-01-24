@@ -1,0 +1,375 @@
+/* Formatação da página HTML */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container do cronômetro */
+.container{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+fieldset{
+    padding: 55px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    transition: 2s;
+}
+
+legend{
+    text-align: center;
+    border-radius: 50%;
+    transition: 2s;
+}
+
+/* Formatação dos números do cronômetro */
+#crono{
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    gap: 2.5rem;
+}
+
+.tempo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    min-width: 55px;
+}
+
+#hora, #minuto, 
+#segundo, #milissegundo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 50px;
+}
+
+#hora{
+    background-color: #0e00d3;
+    transition: 0.9s;
+}
+
+#minuto{
+    background-color: #e19200;
+    transition: 0.7s;
+}
+
+#segundo{
+    background-color: #e300d0;
+    transition: 0.5s;
+}
+
+#milissegundo{
+    background-color: #ff0000;
+    transition: 0.3s;
+    font-size: 30px;
+}
+
+/* Formatação dos números da data */
+#crono-data{
+    position: absolute;
+    left: 15rem;
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#dia, #mes, #ano{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+#dia{
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    display: grid; 
+    align-items: center;
+    justify-content: center;
+}
+
+#mes{
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding: 15px;
+    display: grid; 
+    align-items: center;
+    justify-content: center;
+}
+
+#ano{
+    font-size: 27px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 9px;
+    padding-top: 30%;
+}
+
+#dia{
+    background-color: #00e60b;
+    transition: 0.3s;
+}
+
+#mes{
+    background-color: #00ede9;
+    transition: 0.5s;
+}
+
+#ano{
+    background-color: #8000e2;
+    transition: 0.7s;
+}
+
+/* Formatação de botões */
+
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 70px;
+}
+
+.btn-all{
+    padding: 15px 45px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 30px;
+    border: none;
+    background-color: #092c3e;
+    color: #f1f1f1;
+}
+
+#btnPause{
+    display: none;
+}
+
+#btnEsconder{
+    display: none;
+}
+
+#btnStart{
+    background-color: #2dfc52;
+}
+
+#btnStart:hover{
+    box-shadow: 0 0 10px #2dfc52;
+}
+
+#btnMostrar{    
+    width: 4rem;
+    height: 4rem;
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 50px;
+    border: none;
+    background-color: #092c3e;
+}
+
+#btnEsconder{
+    width: 4rem;
+    height: 4rem;
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 50px;
+    border: none;
+    background-color: #092c3e;
+}
+
+/* Formatação de ícones dos botões */
+
+#btnPause i:hover{
+    color: blue;
+    filter: drop-shadow(0 0 55px blue) drop-shadow(0 0 15px blue) 
+    drop-shadow(0 0 55px blue);
+}
+
+#btnReset i:hover{
+    color: #d7d700;
+    filter: drop-shadow(0 0 55px #d7d700) drop-shadow(0 0 15px #d7d700) 
+    drop-shadow(0 0 55px #d7d700);
+}
+
+#btnMostrar i:hover{
+    color: orangered;
+    filter: drop-shadow(0 0 55px orangered) drop-shadow(0 0 15px orangered) 
+    drop-shadow(0 0 55px orangered);
+}
+
+#btnEsconder i:hover{
+    color: red;
+    filter: drop-shadow(0 0 55px red) drop-shadow(0 0 15px red) 
+    drop-shadow(0 0 55px red);
+} 
+
+#btnMarcar i:hover{
+    color: purple;
+    filter: drop-shadow(0 0 55px purple) drop-shadow(0 0 15px purple) 
+    drop-shadow(0 0 55px purple);
+}
+
+/* Formatação do campo de marcação de tempo */
+
+.marcada{
+    position: absolute;
+    right: 3rem;
+    text-align: center;
+    display: none;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #092c3e;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* Formatação do botão dark/ligth mode */
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #092c3e;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+body.dark-mode{
+    background-color: #092c3e;
+    color: #092c3e;
+}
+
+input[type="checkbox"]:checked ~ .check{
+    background: #f1f1f1;
+}
+
+.check:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #f1f1f1;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+    background: #f1f1f1;
+    transform: translateX(-50px);
+}
+
+.check:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #092c3e;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked ~ .check:after{
+    transform: translateX(0px);
+}
+
+/* Formatação dos demais campos com o dark mode acionado */
+
+body.dark-mode .marcada{
+    background-color: #f1f1f1;
+    color: #092c3e;
+}
+
+body.dark-mode .btn-all{
+    background-color: #f1f1f1;
+    color: #092c3e;
+}
+
+body.dark-mode #btnMostrar{
+    background-color: #f1f1f1;
+    color: #092c3e;
+}
+
+body.dark-mode #btnEsconder{
+    background-color: #f1f1f1;
+    color: #092c3e;
+}
+
+body.dark-mode #dia{
+    box-shadow: 0 0 10px #00ff0c;
+}
+
+body.dark-mode #mes{
+    box-shadow: 0 0 10px #00fffc;
+}
+
+body.dark-mode #ano{
+    box-shadow: 0 0 10px #9200ff;
+}
+
+body.dark-mode #milissegundo{
+    box-shadow: 0 0 10px #ff0000;
+}
+
+body.dark-mode #segundo{
+    box-shadow: 0 0 10px #ff00ea;
+}
+
+body.dark-mode #minuto{
+    box-shadow: 0 0 10px #ffa600;
+}
+
+body.dark-mode #hora{
+    box-shadow: 0 0 10px #1100ff;
+}
